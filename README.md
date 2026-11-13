@@ -4,20 +4,6 @@ MongoDB is a database that stores records as documents. A student document holds
 
 This solution uses JavaScript in `mongosh` for Parts 1 through 3 and Scala with Spark SQL for Part 4. It uses the assignment's Option B. MongoDB stores the birth date as a BSON date. The JSON export represents it as an ISO 8601 string, and Spark reads that field as a timestamp with an explicit schema.
 
-## What to submit
-
-The assignment specifies the code, SQL, results, and generated data to show. It leaves the upload format open. The ZIP contains the following files for submission.
-
-| File | Purpose |
-| --- | --- |
-| `import-students.js` | Parses the supplied CSV, inserts the 100 documents with one `insertMany` call, creates the indexes, and exports the stored data. |
-| `query-students.js` | Validates input and runs the course, GPA, and combined MongoDB queries. |
-| `StudentAnalytics.scala` | Defines the Spark schema and views, runs all the Spark SQL queries, and writes and verifies the Parquet output. |
-| `results.txt` | Contains the MongoDB results and winning plan, the Spark schema, every SQL statement and its output, and the Parquet readback. |
-| `hw2-data.csv` and `students.json` | The supplied CSV and the generated newline-delimited JSON. |
-| `course_stats.parquet/` | The Spark Parquet dataset for the five course summaries. |
-| `run-hw2.ps1` and `README.md` | Windows runner and instructions. |
-
 ## Run and verify on Windows
 
 الأوامر تحت `powershell` تُكتب في PowerShell. أوامر `javascript` تُكتب بعد فتح MongoDB Shell، وأوامر `scala` تُكتب بعد ظهور `scala>` في Spark Shell.
